@@ -1,3 +1,4 @@
+var slideIndex = 1;
 window.onload = main;
 /*http://www.mattmorgante.com/technology/sticky-navigation-bar-javascript*/
 
@@ -5,6 +6,7 @@ function main()
 {
     const nav = document.getElementById("navigation");
     const navTop = nav.offsetTop;
+
 
     function stickyNavigation()
     {
@@ -19,5 +21,7 @@ function main()
             document.body.classList.remove("fixed-nav");
         }
     }
+
     window.addEventListener('scroll', stickyNavigation);
+    showSlides(slideIndex);
 }
